@@ -28,13 +28,13 @@ serve(async (req) => {
       {
         to: [
           {
-            email: "david.dinucujianu@gmail.com",
+            email: "daiana.dinucu@recoverysolutions.ro",
           },
         ],
         subject,
       },
     ],
-    from: { email: "david.dinucujianu@gmail.com" },
+    from: { email: "daiana.dinucu@recoverysolutions.ro" },
     content: [
       {
         type: "text/plain",
