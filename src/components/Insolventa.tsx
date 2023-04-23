@@ -21,7 +21,7 @@ const Insolventa: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4 text-white">
             INSOLVENȚA PERSOANELOR FIZICE
           </h1>
-          <p className="text-white mb-6 text-1xl">
+          <p className="text-white mb-6 text-2xl">
             O șansă pentru un nou început, fără datorii împovărătoare, fără
             execuțări silite și telefoane stânjenitoare.
           </p>
