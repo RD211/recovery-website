@@ -1,0 +1,30 @@
+.propertyContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.propertyInfo,
+.propertyImages {
+  flex: 1;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .propertyInfo,
+  .propertyImages {
+    flex-basis: 100%;
+  }
+}
+
+/* PropertyPage.module.css */
+.propertyGrid {
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for larger screens */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .propertyGrid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for mobile devices */
+  }
+}
+
