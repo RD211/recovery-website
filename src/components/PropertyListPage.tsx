@@ -15,7 +15,7 @@ const PropertyListPage: React.FC = () => {
       if (error) {
         console.error("Error fetching properties:", error.message);
       } else {
-        console.log("Successfully fetched properties:", data)
+        console.log("Successfully fetched properties:", data);
         const formattedData = data.map((property) => ({
           id: property.id,
           title: property.title,
@@ -35,20 +35,17 @@ const PropertyListPage: React.FC = () => {
           documents: property.documents || [], // Add this line
         }));
         setProperties(formattedData || []);
-        
       }
     };
-    
-    
-    
 
     fetchProperties();
   }, []);
 
   return (
     <div className={`container mx-auto mt-8 ${styles.propertyListContainer}`}>
-      <h1 className="text-3xl mb-6 text-blue-700">Listă cu bunuri</h1>
-      <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ${styles.propertyGrid}`}>
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ${styles.propertyGrid}`}
+      >
         {properties.map((property) => (
           <div
             key={property.id}
@@ -59,7 +56,9 @@ const PropertyListPage: React.FC = () => {
               alt={`Property image for ${property.title}`}
               className={`${styles.propertyImage} rounded-t-lg`}
             />
-            <h2 className="text-xl mb-4 font-bold text-blue-800">{property.title}</h2>
+            <h2 className="text-xl mb-4 font-bold text-blue-800">
+              {property.title}
+            </h2>
             <Link
               to={`/property/${property.id}`}
               className={`btn btn-primary ${styles.viewButton} bg-blue-700 hover:bg-blue-500 text-white py-2 px-4 rounded`}

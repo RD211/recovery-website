@@ -21,7 +21,7 @@ const AdminCompanies: React.FC = () => {
           name: company.name,
           status: company.status,
           county: company.county,
-          taxCode: company.tax_code,
+          numberDosar: company.number_dosar,
           cui: company.cui,
           decisionDate: company.decision_date,
           nextTermDate: company.next_term_date,

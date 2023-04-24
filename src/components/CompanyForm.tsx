@@ -11,7 +11,7 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
     name: "",
     status: "",
     county: "",
-    tax_code: "",
+    number_dosar: "",
     cui: "",
     decision_date: "",
     next_term_date: "",
@@ -32,7 +32,7 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
         name: "",
         status: "",
         county: "",
-        tax_code: "",
+        number_dosar: "",
         cui: "",
         decision_date: "",
         next_term_date: "",
@@ -83,19 +83,6 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="tax_code" className="text-sm font-semibold">
-          Cod fiscal:
-        </label>
-        <input
-          type="text"
-          id="tax_code"
-          name="tax_code"
-          value={company.tax_code}
-          onChange={handleChange}
-          className="border border-gray-300 p-2 rounded"
-        />
-      </div>
-      <div className="flex flex-col">
         <label htmlFor="cui" className="text-sm font-semibold">
           CUI:
         </label>
@@ -109,6 +96,19 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
         />
       </div>
       <div className="flex flex-col">
+        <label htmlFor="number_dosar" className="text-sm font-semibold">
+          Numar dosar:
+        </label>
+        <input
+          type="text"
+          id="number_dosar"
+          name="number_dosar"
+          value={company.number_dosar}
+          onChange={handleChange}
+          className="border border-gray-300 p-2 rounded"
+        />
+      </div>
+      <div className="flex flex-col">
         <label htmlFor="decision_date" className="text-sm font-semibold">
           Data hotarare:
         </label>
@@ -116,7 +116,7 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
           type="date"
           id="decision_date"
           name="decision_date"
-          value={formatDateToEuropean(company.decision_date)}
+          value={company.decision_date}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded"
         />
@@ -129,7 +129,7 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
           type="date"
           id="next_term_date"
           name="next_term_date"
-          value={formatDateToEuropean(company.next_term_date)}
+          value={company.next_term_date}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded"
         />

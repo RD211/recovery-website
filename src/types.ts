@@ -40,7 +40,7 @@ export interface Company {
   name: string;
   status: string;
   county: string;
-  taxCode: string;
+  numberDosar: string;
   cui: string;
   decisionDate: string;
   nextTermDate: string;

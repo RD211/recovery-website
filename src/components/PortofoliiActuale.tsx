@@ -8,7 +8,7 @@ interface Company {
   name: string;
   status: string;
   county: string;
-  taxCode: string;
+  numberDosar: string;
   cui: string;
   decisionDate: string;
   nextTermDate: string;
@@ -23,7 +23,7 @@ export const getCompanies = async () => {
     name: company.name,
     status: company.status,
     county: company.county,
-    taxCode: company.tax_code,
+    numberDosar: company.number_dosar,
     cui: company.cui,
     decisionDate: company.decision_date,
     nextTermDate: company.next_term_date,
@@ -57,12 +57,12 @@ const PortofoliiActuale: React.FC = () => {
         accessor: "county",
       },
       {
-        Header: "Cod fiscal",
-        accessor: "taxCode",
-      },
-      {
         Header: "CUI",
         accessor: "cui",
+      },
+      {
+        Header: "Numar dosar",
+        accessor: "numberDosar",
       },
       {
         Header: "Data hotarare",
@@ -100,8 +100,8 @@ const PortofoliiActuale: React.FC = () => {
               <th className="border border-gray-300 px-4 py-2">Nume firma</th>
               <th className="border border-gray-300 px-4 py-2">Stare</th>
               <th className="border border-gray-300 px-4 py-2">Judet</th>
-              <th className="border border-gray-300 px-4 py-2">Cod fiscal</th>
               <th className="border border-gray-300 px-4 py-2">CUI</th>
+              <th className="border border-gray-300 px-4 py-2">Numar Dosar</th>
               <th className="border border-gray-300 px-4 py-2">
                 Data hotarare
               </th>
@@ -126,10 +126,10 @@ const PortofoliiActuale: React.FC = () => {
                   {company.county}
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
-                  {company.taxCode}
+                  {company.cui}
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
-                  {company.cui}
+                  {company.numberDosar}
                 </td>
                 <td className="border border-gray-300 px-4 py-2">
                   {company.decisionDate}
