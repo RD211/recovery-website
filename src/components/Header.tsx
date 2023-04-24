@@ -33,8 +33,12 @@ const Header: React.FC = () => {
       <nav className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/">
-            <img src={logo} alt="logo" className="h-16 w-20 cover
-            " />
+            <img
+              src={logo}
+              alt="logo"
+              className="h-16 w-20 cover
+            "
+            />
           </Link>
           <Link to="/" className="font-bold text-2xl">
             Recovery Solutions
@@ -44,23 +48,23 @@ const Header: React.FC = () => {
           <Link to="/" className="nav-link">
             Acasa
           </Link>
-          <Link to="/team" className="nav-link">
-            Echipa
-          </Link>
           <Link to="/servicii" className="nav-link">
             Servicii
-          </Link>
-          <Link to="/contact" className="nav-link">
-            Contact
           </Link>
           <Link to="/portofolii-actuale" className="nav-link">
             Portofolii Actuale
           </Link>
+          <Link to="/properties" className="nav-link">
+            Portal vanzari
+          </Link>
           <Link to="/insolventa" className="nav-link">
             Insolvență persoane fizice
           </Link>
-          <Link to="/properties" className="nav-link">
-            Bunuri
+          <Link to="/team" className="nav-link">
+            Echipa
+          </Link>
+          <Link to="/contact" className="nav-link">
+            Contact
           </Link>
         </div>
         <BurgerButton
@@ -76,14 +80,8 @@ const Header: React.FC = () => {
         <Link to="/" onClick={toggleMenu} className="nav-link block">
           Acasa
         </Link>
-        <Link to="/team" onClick={toggleMenu} className="nav-link block">
-          Echipa
-        </Link>
         <Link to="/servicii" onClick={toggleMenu} className="nav-link block">
           Servicii
-        </Link>
-        <Link to="/contact" onClick={toggleMenu} className="nav-link block">
-          Contact
         </Link>
         <Link
           to="/portofolii-actuale"
@@ -92,11 +90,17 @@ const Header: React.FC = () => {
         >
           Portofolii Actuale
         </Link>
+        <Link to="/properties" onClick={toggleMenu} className="nav-link block">
+          Portal vanzari
+        </Link>
         <Link to="/insolventa" onClick={toggleMenu} className="nav-link block">
           Insolvență persoane fizice
         </Link>
-        <Link to="/properties" onClick={toggleMenu} className="nav-link block">
-          Bunuri
+        <Link to="/team" onClick={toggleMenu} className="nav-link block">
+          Echipa
+        </Link>
+        <Link to="/contact" onClick={toggleMenu} className="nav-link block">
+          Contact
         </Link>
       </div>
     </header>

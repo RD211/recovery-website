@@ -21,10 +21,16 @@ const Home: React.FC = () => {
           data-aos="fade-up"
         >
           <h1 className="text-4xl font-bold mb-4 text-white">
-            RECOVERY SOLUTIONS SRL
+            RECOVERY SOLUTIONS SPRL
           </h1>
           <p className="text-white mb-6 text-2xl">
-          Soluții eficiente în provocările financiare. Oferim asistență și consultanță în înființarea și funcționarea societăților comerciale, insolvența persoanelor juridice și recuperarea de creanțe. Profesionalism și dedicare pentru a sprijini afacerea dvs.          </p>
+          Soluții eficiente pentru provocările financiare.
+Oferim asistență și consultanță
+în cadrul procedurii de insolventa;
+
+înființarea și funcționarea societăților comerciale și recuperarea de creanțe.
+
+Profesionalism și dedicare pentru a sprijini afacerea dvs.</p>
         </div>
       </div>
       <div className="bg-gray-100 py-8">

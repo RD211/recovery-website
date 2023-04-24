@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { FileRejection, useDropzone } from "react-dropzone";
 import supabase from "../supabaseClient.js";
 import { Property, Document } from "../types.js";
+import { formatDateToEuropean } from "../utils/dateUtils.js";
 
 const EditPropertyPage = () => {
   const { id } = useParams();
@@ -327,7 +328,7 @@ const EditPropertyPage = () => {
             <input
               type="date"
               id="procedureDate"
-              value={procedureDate}
+              value={formatDateToEuropean(procedureDate)}
               onChange={(e) => setProcedureDate(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded-md"
             />
@@ -467,7 +468,7 @@ const EditPropertyPage = () => {
                       type="date"
                       id={`actDate-${index}`}
                       value={
-                        (documentData[index] && documentData[index].actDate) ||
+                        formatDateToEuropean(documentData[index] && documentData[index].actDate) ||
                         ""
                       }
                       onChange={(e) =>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import supabase from "../supabaseClient";
+import { formatDateToEuropean } from '../utils/dateUtils';
 
 interface CompanyFormProps {
   onFormSubmit: () => void;
@@ -115,7 +116,7 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
           type="date"
           id="decision_date"
           name="decision_date"
-          value={company.decision_date}
+          value={formatDateToEuropean(company.decision_date)}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded"
         />
@@ -128,7 +129,7 @@ const CompanyForm: React.FC<CompanyFormProps> = ({ onFormSubmit }) => {
           type="date"
           id="next_term_date"
           name="next_term_date"
-          value={company.next_term_date}
+          value={formatDateToEuropean(company.next_term_date)}
           onChange={handleChange}
           className="border border-gray-300 p-2 rounded"
         />

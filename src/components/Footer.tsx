@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                 <strong>Email:</strong> office@recovery-solutions.ro
               </li>
               <li>
-                <strong>Adresa:</strong> STR. CALUSEI nr.21A, PARTER, BUCURESTI, SECTOR 2
+                <strong>Adresa:</strong> Str. Calusei nr.21, sector 2, Bucuresti.
               </li>
             </ul>
           </div>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-white-700 mt-6 pt-6">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-sm text-center">
-            &copy; {currentYear} Recovery Solutions SRL. All rights reserved.
+            &copy; {currentYear} drepturile 2023 Recovery Solutions SPRL
           </p>
         </div>
       </div>

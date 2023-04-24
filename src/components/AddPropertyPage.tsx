@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FileRejection, useDropzone } from "react-dropzone";
 import supabase from "../supabaseClient.js";
 import { Document } from "../types.js";
+import { formatDateToEuropean } from '../utils/dateUtils';
 
 const AddPropertyPage = () => {
   const [title, setTitle] = useState("");
@@ -309,7 +310,7 @@ const AddPropertyPage = () => {
               type="date"
               id="procedureDate"
               value={procedureDate}
-              onChange={(e) => setProcedureDate(e.target.value)}
+              onChange={(e) => setProcedureDate(formatDateToEuropean(e.target.value))}
               className="w-full px-4 py-2 border border-gray-300 rounded-md"
             />
           </div>
@@ -440,7 +441,7 @@ const AddPropertyPage = () => {
                       type="date"
                       id={`actDate-${index}`}
                       value={
-                        (documentData[index] && documentData[index].actDate) ||
+                        formatDateToEuropean(documentData[index] && documentData[index].actDate) ||
                         ""
                       }
                       onChange={(e) =>
