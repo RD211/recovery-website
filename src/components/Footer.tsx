@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
       <div className="border-t border-white-700 mt-6 pt-6">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-sm text-center">
-            &copy; {currentYear} drepturile 2023 Recovery Solutions SPRL
+            &copy; {currentYear} Recovery Solutions SPRL. All rights reserved.
           </p>
         </div>
       </div>
